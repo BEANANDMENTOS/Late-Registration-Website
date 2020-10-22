@@ -13,11 +13,10 @@
 <body>
 <div class="jumbotron text-center">
   <div class="container">
-    <p>First Name: <%= fname %></p>
-	<p>Last Name: <%=lName %></p>
+    <p>First Name: x</p>
+	<p>Last Name: y</p>
    </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -37,6 +36,43 @@
     </div>
   </div>
 </div>
+
+<div>
+<table style="width:100%">
+  <table class="table table-dark table-striped">
+  <tr>
+    <th>ชื่อ</th>
+    <th>นามสกุล</th>
+    <th>ที่อยู่</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>11120</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>11120</td>
+  </tr>
+</table>
+</div>
+<div>
+
+</div>
+
+<h2>TU Forms</h2>
+
+<form action="/api">
+  <label for="fname">User name:</label><br>
+  <input type="user" id="user" name="user" value="thanachot"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd" value="1234"><br><br>
+  <input type="submit" value="Ok">
+   <input type="reset" value="Cancel">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/api".</p>
 
 </body>
 </html>

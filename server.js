@@ -22,6 +22,15 @@ app.listen(PORT, function () {
 app.get('/api', function (req, res) {
     const queryParams = req.query;
     console.log('param[1]:' + queryParams['user']);
+    console.log('param[2]:' + queryParams['pwd']);
+    if(queryParams['user']=="thanachot"&&queryParams['pwd']=="1234")
+    {
+        res.send("success");
+    }
+    else
+    {
+        res.send("error");
+    }
     res.send(queryParams);
 });
 
