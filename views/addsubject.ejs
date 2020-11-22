@@ -1,19 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+    <title>ลงทะเบียน</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:wght@200;300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container-fluid">
-    
+<div class="container-fluid pt-3">
+    <div class="logo">
+        <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt=""
+            width="500px">
+    </div>
+    <div class="userAccount">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg" style="float: left;">
+            <path
+                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+        </svg>
+        <h4 style="float: left;">Naefkeaa Weeryy</h4>
+
+    </div>
+    <div class="clearfix"></div>
+    <br>
+    <div class="menu">
+        <form action="/home" style="margin-top: 10px; margin-bottom: 80px;">
+            <button class="btn btn btn-outline-primary">หน้าแรก</button>
+        </form>
+
+        <form action="">
+            <button class="btn btn-outline-warning">ประวัตินักศึกษา</button>
+        </form>
+        <form action="">
+            <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
+        </form>
+        <form action="" style="margin-bottom: 50px;">
+            <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
+        </form>
+
+        <form action="">
+            <a href="https://www.instagram.com/mr.bean_eiei/" class="btn btn-outline-success">Contact Us</a>
+        </form>
+        <form action="/">
+            <button class="btn btn-outline-danger">ออกจากระบบ</button>
+        </form>
+    </div>
+    <div class="bigBox">
+        <form action="/information">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="float: right; margin-top: 10px; margin-right: 20px;">
+                เพิ่มวิชา
+            </button>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-4" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="margin: 0; margin-left: 220px;">
+                  <div class="modal-content" style="width: 1000px;">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left: 15px;"><b>        <u>ข้อกำหนด และ เงื่อนไข</b></u></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 20px; height: 20px; float: right; margin-right: 20px;">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                <pre>
+    - นักศึกษา​ควรเข้าเรียนไม่ต่ำกว่า 70%<br>
+    - มีจำนวนหน่วยกิตของวิชาที่ต้องการจดทะเบียนรวมทั้งสิ้นไม่น้อยกว่า 9 หน่วยกิจและไม่เกิน 22 หน่วยกิจ<br>
+    - หากไม่จดทะเบียนภายใน 30 วัน หลังจากเปิดภาคเรียนโดยไม่มีการขอลาพักไว้ล่วงหน้า ถูกถอนชื่อออกจากการเป็นนักศึกษา<br>
+    - ต้องมีเหตุผลอันสมควรในการยื่นคำร้องจดทะเบียนล่าช้า ต้องมีหลักฐานประกอบมีเหตุผลดังต่อไปนี้<br>
+        -​ อาการป่วย ต้องมีใบรับรองแพทย์<br>
+        - ​อื่นๆ เช่น ปัญญา​ทางครอบครัว<br>
+    - เก็บเงินค่าจดทะเบียนล่าช้า วันละ 45 บาท นับตั้งแต่วันแรกของการจดทะเบียน​ล่าช้าในระบบ จนถึงวันที่สั่งใบยื่นคำร้องจดทะเบียน​ล่าช้า               <br>
+    - 1 คำร้องต่อ 1 รายวิชา
+                </pre>
+                <label style="margin-left: 50px;">
+                    <input type="checkbox"> รับทราบเงื่อนไข
+                </label>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="agreebtn text-md-center">
+                            <form action="/information">
+                                <a class="btn btn-danger">ยกเลิก</a>
+                                <a class="btn btn-success" style="margin-left: 10px;">ตกลง</a>
+                            </form>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </form>
+        
+    </div>
 </div>
 
 </body>
 </html>
+
+<style>
+    body {
+        background: url(https://wallpapersflood.com/wp-content/uploads/hawaii_4k_hd_wallpaper_kee_beach_island_kauai_sky_sea_ocean_water_sunset_sunrise_rocks_sun_clouds_26696.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

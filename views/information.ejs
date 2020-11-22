@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>กรอกข้อมูล</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:wght@200;300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid pt-3">
+        <div class="logo">
+            <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt=""
+                width="500px">
+        </div>
+        <div class="userAccount">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg" style="float: left;">
+                <path
+                    d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+            </svg>
+            <h4 style="float: left;">Naefkeaa Weeryy</h4>
+
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <div class="menu">
+            <form action="" style="margin-top: 10px; margin-bottom: 80px;">
+                <button class="btn btn btn-outline-primary">หน้าแรก</button>
+            </form>
+
+            <form action="">
+                <button class="btn btn-outline-warning">ประวัตินักศึกษา</button>
+            </form>
+            <form action="/addsubject">
+                <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
+            </form>
+            <form action="" style="margin-bottom: 50px;">
+                <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
+            </form>
+
+            <form action="">
+                <a href="https://www.instagram.com/mr.bean_eiei/" class="btn btn-outline-success">Contact Us</a>
+            </form>
+            <form action="/">
+                <button class="btn btn-outline-danger">ออกจากระบบ</button>
+            </form>
+        </div>
+        <div class="bigBox">
+            <p class="textBox" style="width: 200px;">ชื่อ : Mr.bean  EIEI</p>
+            <p class="textBox" style="width: 230px;">เลขทะเบีน : 6209650XXX</p>
+            <p class="textBox" style="width: 375px;">สาขา : วิทยาการคอมพิวเตอร์</p>
+            <p class="textBox" style="width: 60px;">ชั้นปีที่</p>
+                <select class="form-control" id="sel1" style="width: 70px; height: 32px;">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+            <div class="clearfix"></div>
+            <div class="form">
+                <p>บ้านเลขที่<input name="houseNum" id="houseNum" class="form-control" type="text" style="width: 150px;"></p>
+            </div>
+            <div class="form">
+                <p>แขวง/ตำบล<input name="tambon" id="tambon" class="form-control" type="text" style="width: 250px;"></p>
+            </div>
+            <div class="form">
+                <p>เขต/อำเภอ<input name="amphoe" id="amphoe" class="form-control" type="text" style="width: 250px;"></p>
+            </div>
+            <div class="form">
+                <p>จังหวัด<input name="province" id="province" class="form-control" type="text" style="width: 300px;"></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form">
+                <p>โทรศัพท์ติดต่อนักศึกษา<input name="phonenumber_student" id="phonenumber_student" class="form-control" type="text" style="width: 250px;"></p>
+            </div>
+            <div class="form">
+                <p>โทรศัพท์ติดต่อผู้ปกครอง<input name="phonenumber_parents" id="phonenumber_parents" class="form-control" type="text" style="width: 250px;"></p>
+            </div>
+            <div class="form">
+                <p>ชื่ออาจารย์ที่ปรึกษา<input name="advisorName" id="advisorName" class="form-control" type="text" style="width: 400px;"></p>
+            </div>
+            <div class="form">
+                <p>รหัสวิชา<input name="courseCode" id="courseCode" class="form-control" type="text" style="width: 150px;"></p>
+            </div>
+            <div class="form">
+                <p><b>Section</b><input name="section" id="section" class="form-control" type="text" style="width: 150px;"></p>
+            </div>
+            <div class="form">
+                <p>ภาคเรียนที่<input name="term" id="term" class="form-control" type="text" style="width: 200px;"></p>
+            </div>
+            <div class="form">
+                <p>ปีการศึกษา<input name="academic_year" id="academic_year" class="form-control" type="text" style="width: 200px;"></p>
+            </div>
+            <div class="form">
+                <p>ชื่อวิชา<input name="subject" id="subject" class="form-control" type="text" style="width: 400px;"></p>
+            </div>
+            <div class="form">
+                <p>อาจารย์ผู้สอน<input name="teacher" id="teacher" class="form-control" type="text" style="width: 400px;"></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form">
+                <p>เหตุผลที่ยื่นคำร้อง<textarea class="form-control" rows="3" id="text" style="width: 1000px;"></textarea></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        background: url(https://wallpapersflood.com/wp-content/uploads/hawaii_4k_hd_wallpaper_kee_beach_island_kauai_sky_sea_ocean_water_sunset_sunrise_rocks_sun_clouds_26696.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

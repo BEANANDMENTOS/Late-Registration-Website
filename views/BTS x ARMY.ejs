@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <TITLE>คำร้องจดทะเบียนล่าช้า</TITLE>
+    
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+    <div class="main">
+    <h3 align = 'center'>คำร้องนักศึกษา</h3>
+    <p align = 'center'>โครงการปริญญาตรีภาคพิเศษ ภาควิชาวิทยาการคอมพิวเตอร์</p>
+    <p align = 'center'>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</p>
+    </div>
+
+
+    <div class="center">
+    <p>เรื่อง<input type="text" name="เรื่อง"> </input></p>
+    <p>เรียน<input type="text" name="เรียน"> </input></p>
+    </div>
+
+    <div class="profile">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้าพเจ้า นาย/นางสาว <input type="text" name="ชื่อนศ."> </input> เลขทะเบียน<input type="text" name="เลขทะเบียน"> </input>  ชั้นปีที่ <input type="number" name="ชั้นปี"> </input></p>
+    <p>สาขาวิชา<input type="text" name="สาขา"> </input> ที่อยู่ที่ติดต่อได้เลขที่ <input type="text" name="ที่อยู่"> </input> แขวง/ตำบล <input type="text" name="ตำบล"> </input></p>
+    <p>เขต/อำเภอ <input type="text" name="อำเภอ"> </input> จังหวัด <input type="text" name="จังหวัด"> </input> โทรศัพท์ติดต่อนักศึกษา <input type="type" name="เบอร์โทร"> </input> </p>
+    <p> โทรศัพท์ติดต่อผู้ปกครอง <input type="text" name="เบอร์โทรผู้ปกครอง" > </input> อาจารย์ที่ปรึกษา <input type="text" name="อาจารย์ที่ปรึกษา"> </input> </p>
+    </div>
+
+    <div class="subheading">
+    <b>ประสงค์ยื่นคำร้อง</b><br><br>
+    </div>
+
+
+    <div class="late register">
+    <b><input type="checkbox" name="จดทะเบียนล่าช้า">จดทะเบียนล่าช้า/เพิ่มล่าช้า </input></b>
+    <p>ภาคการศึกษาที่<input type="number"id="number" name="เทอม"> </input> / <input type="text" name="ปี"> </input></p>
+    <p>รหัสวิชา<input type="text" name="รหัสวิชา"> </input> ชื่อวิชา<input type="text" name="ชื่อวิชา"></input>section<input type="text" name="section"></input></p>
+    </div>
+
+
+    <div class="late register">
+    <b><input type="checkbox" name="ถอนรายวิชา">ขอถอนรายวิชา/ถอนรายวิชา(Drop W) </input></b>
+    <p>ภาคการศึกษาที่<input type="number"id="number" name="เทอม"> </input> / <input type="text" name="ปี"> </input></p>
+    <p>รหัสวิชา<input type="text" name="รหัสวิชา"> </input> ชื่อวิชา<input type="text" name="ชื่อวิชา"></input>section<input type="text" name="section"></input></p>
+    </div>
+
+
+    <div class="cancel">
+    <b><input type="checkbox" name="ขอจดทะเบียนศึกษารายวิชาข้ามโครงการ">ขอจดทะเบียนศึกษารายวิชาข้ามโครงการ </input></b>
+    <p>ภาคการศึกษาที่<input type="number" id="number" name="เทอม"> </input> / <input type="text" name="ปี"> </input></p>
+    <p>รหัสวิชา<input type="text" name="รหัสวิชา"> </input> ชื่อวิชา<input type="text" name="ชื่อวิชา"></input>section<input type="text" name="section"></input></p>
+    </div>
+
+
+    <div class="bye">
+    <b><input type="checkbox" name="ลาออก">ขอลาออก </input></b>
+    <p>ตั้งแต่ภาค<input type="number"id="number" name="เทอม"> </input>ปีการศึกษา<input type="text" name="ปี"> </input></p>
+    <b><u>คำรับรองผู้ปกครองนักศึกษา</u></b>
+    <p>ข้าพเจ้า (นาย/นาง) <input type="text" name="ชื่อผู้ปกครอง"> </input> เป็นผู้ปกครองของ <br>
+        นาย/นางสาว<input type="text" name="ชื่อนศ."> </input>ได้รับทราบการขอลาออกจากการเป็นนักศึกษามหาวิทยาลัยธรรมศาสตร์ จริง</p>
+    </div>
+
+    <div class="bye">
+    <b><input type="checkbox" name="อื่นๆ">อื่นๆ(โปรดระบุ)<input type="text" name="อื่นๆ"> </input></input></b>
+    <p>เหตุผลที่ยื่นคำร้องเนื่องจาก<input type="text" name="สาเหตุยื่นคำร้อง"> </input></p>
+    <p>&nbsp;&nbsp;&nbsp; จึงเรียนมาเพื่อโปรดพิจารณาอนุมัติและดำเนินการต่อไปด้วย จักเป็นพระคุณอย่างยิ่ง</p>
+    <p align = 'center'>ขอแสดงความนับถือ</p>
+    </div>
+
+    <div class="student sign">
+    <p align = 'right'>ลงชื่อ.......................(นักศึกษา) วันที่ยื่นคำร้อง........................</p>
+    </div>
+
+
+    <div class="teacher sign">
+    <table BORDER="1" WIDTH="100%">
+        <div class="square">
+        <tr>
+            <TD align="center" valign="mid">ความคิดเห็นอาจารย์ที่ปรึกษา<br><br>
+                .............................
+            <p>ลงชื่อ...............วันที่................</p>
+            </TD>
+            
+
+            <TD align="center" valign="mid">ความเห็นเจ้าหน้าที่โครงการฯ<br><br>
+                .............................
+            <p>ลงชื่อ....................วันที่................</p>
+            </TD>
+        </tr>
+
+        <tr>
+            <TD align="center" valign="mid">ความเห็นอาจารย์ผู้สอน / ผู้อำนวยโครงการฯ<br><br>
+                .............................
+            <p>ลงชื่อ....................วันที่................</p>
+            </TD>
+
+
+            <TD align="center" valign="mid">ความเห็นคณบดี<br><br>
+                <input type="checkbox" name="อนุมัติ">อนุมัติ........... </input><br>
+                <input type="checkbox" name="ไม่อนุมัติ">ไม่อนุมัติ เพราะ........... </input><br>
+                <input type="checkbox" name="ดำเนินการตามเสนอ">ดำเนินการตามเสนอ........... </input><br>
+                
+                <p>ลงชื่อ...............วันที่................</p>
+            </TD>
+        </div>
+        </tr>
+    </table>
+    </div>
+</body>
+<style> 
+    
+
+
+
+
+</style>
+</html>
