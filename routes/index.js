@@ -14,6 +14,10 @@ router.get('/home', function (req, res, next) {
   res.render('home', { title: 'nice' });
 });
 
+router.get('/accInfo', function (req, res, next) {
+  res.render('accInfo', { title: 'nice' });
+});
+
 router.get('/agreement', function (req, res, next) {
   res.render('agreement', { title: 'well' });
 });
