@@ -42,6 +42,10 @@ router.get('/new', function (req, res, next) {
   res.render('new', { title: 'YEAH' });
 });
 
+router.get('/ploy', function (req, res, next) {
+  res.render('ploy', { title: 'YEAH' });
+});
+
 router.post("/login", async (req, res) => {
   //api
 });
