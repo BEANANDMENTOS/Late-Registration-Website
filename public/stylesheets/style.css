@@ -116,6 +116,18 @@ p,input {
   width: 78px !important;
   height: 35px !important;
 }
+
+.subjectBox {
+  margin-left: 35px;
+  width: 1000px;
+  height: 125px;
+  padding: 20px 30px;
+  background-color: whitesmoke;
+  /* box-shadow: 7px 5px 7px 4px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+  border: 1px solid black; 
+}
+
 /* information */
 .textBox {
   font-size: larger;
@@ -127,4 +139,19 @@ p,input {
 
 .accBox {
   color: black;
+}
+
+.chargeBox {
+  padding: 15px 20px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  width: 1010px;
+  height: 350px;
+  border-radius: 10px;
+}
+.summarize {
+  width: 1010px;
+  height: 50px;
+  background-color: #DCDCDC;
+  border-radius: 10px;
 }
