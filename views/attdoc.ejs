@@ -18,14 +18,19 @@
   <div class="logo">
     <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt="" width="500px">
   </div>
-  <div class="userAccount">
-    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="float: left;">
-        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
-        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-    </svg>
-    <h4>Naefkeaa Weeryy</h4>
-  </div>
+  <a href="/accInfo" class="accBox">
+    <div class="userAccount">
+        <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg" style="float: left;">
+            <path
+                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+        </svg>
+        <h4 style="float: left; margin-left: 5px;"><%= displayname_th %></h4>
+        
+    </div>
+     </a>
   <div class="clearfix"></div>
   <br>
   <div class="menu">
@@ -39,37 +44,68 @@
     <form action="">
         <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
     </form>
+    <form action="/payment">
+      <button class="btn btn-outline-warning">ชำระเงิน</button>
+  </form>
     <form action="" style="margin-bottom: 50px;">
         <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
     </form>
 
-    <form action="">
-        <a href="https://www.instagram.com/mr.bean_eiei/" class="btn btn-outline-success">Contact Us</a>
-    </form>
-    <form action="/">
-        <button class="btn btn-outline-danger">ออกจากระบบ</button>
-    </form>
+    <form action="/contactus">
+      <button class="btn btn-outline-success">Contact Us</button>
+  </form>
+  <form action="/">
+    <button class="btn btn-outline-danger" onclick="myFunction()">ออกจากระบบ</button>
+  </form>
+  <p id="demo"></p>
+  <script>
+    function myFunction() {
+      var txt;
+      if (confirm("ต้องการออกจากระบบใช่หรือไม่")) 
+      {
+        txt = "OK";
+      } else 
+      {
+        txt = "Cancel";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    </script>
   </div>
   <div class="bigBox">
     <br>
-    <div class="filePic">
-        <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.0-9/124813983_3648236621938075_2210061867221362890_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4Mlr9Nx0VhSNGp-PATfPwDIZsZnizZI0MhmxmeLNkjWSOfYT2mVu3AdOMljkrrtMPQucsi3Ycfl4d75trtvSO&_nc_ohc=mroOPlyTlucAX9ppWX6&_nc_ht=scontent.fbkk13-2.fna&oh=99b98d22606a3726dc7270d871ea3483&oe=5FD2D4F6" alt="" height="100px"><br><br><br>
-        <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.0-9/124813983_3648236621938075_2210061867221362890_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4Mlr9Nx0VhSNGp-PATfPwDIZsZnizZI0MhmxmeLNkjWSOfYT2mVu3AdOMljkrrtMPQucsi3Ycfl4d75trtvSO&_nc_ohc=mroOPlyTlucAX9ppWX6&_nc_ht=scontent.fbkk13-2.fna&oh=99b98d22606a3726dc7270d871ea3483&oe=5FD2D4F6" alt="" height="100px"><br><br><br>
-        <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.0-9/124813983_3648236621938075_2210061867221362890_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4Mlr9Nx0VhSNGp-PATfPwDIZsZnizZI0MhmxmeLNkjWSOfYT2mVu3AdOMljkrrtMPQucsi3Ycfl4d75trtvSO&_nc_ohc=mroOPlyTlucAX9ppWX6&_nc_ht=scontent.fbkk13-2.fna&oh=99b98d22606a3726dc7270d871ea3483&oe=5FD2D4F6" alt="" height="100px"><br><br>
-    </div>
-    <div class="text">
+    <div class="fileBox">
+      <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.0-9/124813983_3648236621938075_2210061867221362890_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4Mlr9Nx0VhSNGp-PATfPwDIZsZnizZI0MhmxmeLNkjWSOfYT2mVu3AdOMljkrrtMPQucsi3Ycfl4d75trtvSO&_nc_ohc=mroOPlyTlucAX9ppWX6&_nc_ht=scontent.fbkk13-2.fna&oh=99b98d22606a3726dc7270d871ea3483&oe=5FD2D4F6" alt="" height="100px" style="float: left;">
+      <div style="float: left;">
+        <br>
         <p>สำเนาบัตรประชาชน (PDF ONLY)</p>
-        <input id="file-upload" type="file"/> <br>
-        <br><br><br><br>
-        <p>สำเนาทะเบียนบ้าน (PDF ONLY)</p>
-        <input id="file-upload" type="file"/> <br>
-        <br><br><br><br>
-        <p>ใบคำร้องขอลงทะเบียน (PDF ONLY)</p>
-        <input id="file-upload" type="file"/> <br>
+        <input id="file-upload" type="file" style="margin-left: 20px;"/>
+      </div>
     </div>
+    <div class="clearfix"></div>
+    <br>
+    <div class="fileBox">
+      <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.0-9/124813983_3648236621938075_2210061867221362890_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4Mlr9Nx0VhSNGp-PATfPwDIZsZnizZI0MhmxmeLNkjWSOfYT2mVu3AdOMljkrrtMPQucsi3Ycfl4d75trtvSO&_nc_ohc=mroOPlyTlucAX9ppWX6&_nc_ht=scontent.fbkk13-2.fna&oh=99b98d22606a3726dc7270d871ea3483&oe=5FD2D4F6" alt="" height="100px" style="float: left;">
+      <div style="float: left;">
+        <br>
+        <p>สำเนาทะเบียนบ้าน (PDF ONLY)</p>
+        <input id="file-upload" type="file" style="margin-left: 20px;"/>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <br>
+    <div class="fileBox">
+      <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.0-9/124813983_3648236621938075_2210061867221362890_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4Mlr9Nx0VhSNGp-PATfPwDIZsZnizZI0MhmxmeLNkjWSOfYT2mVu3AdOMljkrrtMPQucsi3Ycfl4d75trtvSO&_nc_ohc=mroOPlyTlucAX9ppWX6&_nc_ht=scontent.fbkk13-2.fna&oh=99b98d22606a3726dc7270d871ea3483&oe=5FD2D4F6" alt="" height="100px" style="float: left;">
+      <div style="float: left;">
+        <br>
+        <p>ใบคำร้องขอลงทะเบียน (PDF ONLY)</p>
+        <input id="file-upload" type="file" style="margin-left: 20px;"/>
+      </div>
+    </div>
+
     <div class="btnYN">
         <form action="/home">
-            <button class="btn btn-danger" style="float: left;">ยกเลิก</button>
+            <button class="btn btn-danger" style="float: left; margin-right: 10px;">ยกเลิก</button>
             <button class="btn btn-warning" style="float: left;">ยืนยัน</button>
         </form>
     </div>
@@ -81,7 +117,7 @@
 
 <style>
 body {
-    background: url(https://wallpapersflood.com/wp-content/uploads/hawaii_4k_hd_wallpaper_kee_beach_island_kauai_sky_sea_ocean_water_sunset_sunrise_rocks_sun_clouds_26696.jpg);
+    background: url(https://cdn.discordapp.com/attachments/464453473484931073/779756315680440340/763840.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

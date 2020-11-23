@@ -21,21 +21,23 @@
             <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt=""
                 width="500px">
         </div>
-        <div class="userAccount">
-            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg" style="float: left;">
-                <path
-                    d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-            </svg>
-            <h4 style="float: left;">Naefkeaa Weeryy</h4>
-
-        </div>
+        <a href="/accInfo" class="accBox">
+            <div class="userAccount">
+                <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" style="float: left;">
+                    <path
+                        d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                </svg>
+                <h4 style="float: left; margin-left: 5px;"><%= displayname_th %></h4>
+                
+            </div>
+             </a>
         <div class="clearfix"></div>
         <br>
         <div class="menu">
-            <form action="" style="margin-top: 10px; margin-bottom: 80px;">
+            <form action="/home" style="margin-top: 10px; margin-bottom: 80px;">
                 <button class="btn btn btn-outline-primary">หน้าแรก</button>
             </form>
 
@@ -45,20 +47,54 @@
             <form action="/addsubject">
                 <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
             </form>
+            <form action="/payment">
+                <button class="btn btn-outline-warning">ชำระเงิน</button>
+            </form>
             <form action="" style="margin-bottom: 50px;">
                 <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
             </form>
 
-            <form action="">
-                <a href="https://www.instagram.com/mr.bean_eiei/" class="btn btn-outline-success">Contact Us</a>
+            <form action="/contactus">
+                <button class="btn btn-outline-success">Contact Us</button>
             </form>
             <form action="/">
-                <button class="btn btn-outline-danger">ออกจากระบบ</button>
+                <button class="btn btn-outline-danger" onclick="myFunction()">ออกจากระบบ</button>
             </form>
+            <p id="demo"></p>
+            <script>
+                function myFunction() {
+                  var txt;
+                  if (confirm("ต้องการออกจากระบบใช่หรือไม่")) 
+                  {
+                    txt = "OK";
+                  } else 
+                  {
+                    txt = "Cancel";
+                  }
+                  document.getElementById("demo").innerHTML = txt;
+                }
+                </script>
         </div>
         <div class="bigBox">
-            <h1 style="margin-left: 20px;">ข้อมูลส่วนตัว</h1>
-            
+            <div style="margin-left: 40px; margin-top: 15px;">
+                <h2>ข้อมูลส่วนตัว</h2>
+                <img src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-374-456326-512.png" style="width: 200px; margin-top: 20px; float: left; border-radius: 50%;">
+                <div style="float: left; margin-top: 66px; margin-left: 50px;">
+                    <h2 id="name_TH" style="margin-bottom: 10px;"><%= displayname_th %></h2>
+                    <h4 id="name_Eng"><%= displayname_en %></h4>
+                    <h3 id="studentID"><%= username %></h3>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+                <div style="margin-top: 20px; margin-left: 50px;">
+                    <h3 style="float: left;">Email : <%= email %></h3>
+                    <h3 style="margin-left: 50px; float: left;">สถานะ : <%= tu_status %></h3>
+                    <div class="clearfix"></div>
+                    <h3 style="margin-top: 10px;">สาขา : <%= department %></h3>
+                    <h3 style="margin-top: 10px;">คณะ : <%= faculty %></h3>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -68,7 +104,7 @@
 
 <style>
     body {
-        background: url(https://wallpapersflood.com/wp-content/uploads/hawaii_4k_hd_wallpaper_kee_beach_island_kauai_sky_sea_ocean_water_sunset_sunrise_rocks_sun_clouds_26696.jpg);
+        background: url(https://cdn.discordapp.com/attachments/464453473484931073/779756315680440340/763840.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

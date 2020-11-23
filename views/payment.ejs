@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Payment</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:wght@200;300&display=swap"
+            rel="stylesheet">
+    </head>
+    </html>
+
+    <body>
+        <div class="container-fluid pt-3">
+            <div class="logo">
+                <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt=""
+                    width="500px">
+            </div>
+            <a href="/accInfo" class="accBox">
+                <div class="userAccount">
+                    <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" style="float: left;">
+                        <path
+                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                    </svg>
+                    <h4 style="float: left; margin-left: 5px;"><%= displayname_th %></h4>
+                    
+                </div>
+                 </a>
+            <div class="clearfix"></div>
+            <br>
+            <div class="menu">
+                <form action="/home" style="margin-top: 10px; margin-bottom: 80px;">
+                    <button class="btn btn btn-outline-primary">หน้าแรก</button>
+                </form>
+    
+                <form action="/accInfo">
+                    <button class="btn btn-outline-warning">ประวัตินักศึกษา</button>
+                </form>
+                <form action="/addsubject">
+                    <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
+                </form>
+                <form action="/payment">
+                    <button class="btn btn-outline-warning">ชำระเงิน</button>
+                </form>
+                <form action="" style="margin-bottom: 50px;">
+                    <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
+                </form>
+    
+                <form action="/contactus">
+                    <button class="btn btn-outline-success">Contact Us</button>
+                </form>
+                <form action="/">
+                    <button class="btn btn-outline-danger" onclick="myFunction()">ออกจากระบบ</button>
+                </form>
+                <p id="demo"></p>
+    <script>
+    function myFunction() {
+      var txt;
+      if (confirm("ต้องการออกจากระบบใช่หรือไม่")) 
+      {
+        txt = "OK";
+      } else 
+      {
+        txt = "Cancel";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    </script>
+            </div>
+            <div class="bigBox">
+                <img src="https://cdn.discordapp.com/attachments/702881122211856424/780397741964525608/IMG_5528_copy.jpg" alt="alternatetext" style="width:3ถจpx;height:265px;margin:0px 10px 10px 350px;">
+                <h3>เลขบัญชี 407-882758-4 ชื่อ มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h3>
+                <h3>สาขา มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h3>
+                <p>รหัสอ้างอิง<input name="reference-code" id="reference-code" class="form-control" type="text" style="width: 700px;margin-top: 0px;"></p>
+                <p>สลิปการโอนเงิน (<JPEG><PNG></PNG>  JPEG/PNG ONLY)</p>
+                <input id="file-upload" type="file" style="margin-left: 20px;" class="copy"/> <br>
+                <a href="/addsubject" class="btn btn-success" style="margin-top: 140px; margin-left: 850px;margin-top: -20px;"onclick="alert('Success!!')">บันทึก</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    </body>
+
+    <style>
+        body 
+        {
+            background: url(https://cdn.discordapp.com/attachments/464453473484931073/779756315680440340/763840.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h3 
+        {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 15px;
+            color: #000000;
+            margin-top: 0px;
+        }
+        .copy 
+        {cursor: copy;}
+    </style>

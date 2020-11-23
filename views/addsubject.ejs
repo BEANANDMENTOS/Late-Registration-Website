@@ -19,17 +19,19 @@
         <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt=""
             width="500px">
     </div>
-    <div class="userAccount">
-        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg" style="float: left;">
-            <path
-                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-        </svg>
-        <h4 style="float: left;">Naefkeaa Weeryy</h4>
-
-    </div>
+    <a href="/accInfo" class="accBox">
+        <div class="userAccount">
+            <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg" style="float: left;">
+                <path
+                    d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+            </svg>
+            <h4 style="float: left; margin-left: 5px;"><%= displayname_th %></h4>
+            
+        </div>
+         </a>
     <div class="clearfix"></div>
     <br>
     <div class="menu">
@@ -43,16 +45,33 @@
         <form action="">
             <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
         </form>
+        <form action="/payment">
+            <button class="btn btn-outline-warning">ชำระเงิน</button>
+        </form>
         <form action="" style="margin-bottom: 50px;">
             <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
         </form>
 
-        <form action="">
-            <a href="https://www.instagram.com/mr.bean_eiei/" class="btn btn-outline-success">Contact Us</a>
+        <form action="/contactus">
+            <button class="btn btn-outline-success">Contact Us</button>
         </form>
         <form action="/">
-            <button class="btn btn-outline-danger">ออกจากระบบ</button>
+            <button class="btn btn-outline-danger" onclick="myFunction()">ออกจากระบบ</button>
         </form>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+              var txt;
+              if (confirm("ต้องการออกจากระบบใช่หรือไม่")) 
+              {
+                txt = "OK";
+              } else 
+              {
+                txt = "Cancel";
+              }
+              document.getElementById("demo").innerHTML = txt;
+            }
+            </script>
     </div>
     <div class="bigBox">
         <form action="/information">
@@ -61,7 +80,7 @@
             </button>
             <div class="modal fade" id="exampleModalCenter" tabindex="-4" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document" style="margin: 0; margin-left: 220px;">
-                  <div class="modal-content" style="width: 1000px;">
+                  <div class="modal-content" style="width: 1200px;">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left: 15px;"><b>        <u>ข้อกำหนด และ เงื่อนไข</b></u></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 20px; height: 20px; float: right; margin-right: 20px;">
@@ -69,7 +88,7 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                <pre>
+                <pre style="font-family: 'Sarabun', sans-serif; font-size: large;">
     - นักศึกษา​ควรเข้าเรียนไม่ต่ำกว่า 70%<br>
     - มีจำนวนหน่วยกิตของวิชาที่ต้องการจดทะเบียนรวมทั้งสิ้นไม่น้อยกว่า 9 หน่วยกิจและไม่เกิน 22 หน่วยกิจ<br>
     - หากไม่จดทะเบียนภายใน 30 วัน หลังจากเปิดภาคเรียนโดยไม่มีการขอลาพักไว้ล่วงหน้า ถูกถอนชื่อออกจากการเป็นนักศึกษา<br>
@@ -102,7 +121,7 @@
 
 <style>
     body {
-        background: url(https://wallpapersflood.com/wp-content/uploads/hawaii_4k_hd_wallpaper_kee_beach_island_kauai_sky_sea_ocean_water_sunset_sunrise_rocks_sun_clouds_26696.jpg);
+        background: url(https://cdn.discordapp.com/attachments/464453473484931073/779756315680440340/763840.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

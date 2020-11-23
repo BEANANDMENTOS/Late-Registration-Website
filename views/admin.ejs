@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- frontEng -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form action="/home"> <!-- method="POST" -->
+    <div class="login text-center">
+        <h1><b>LOGIN</b></h1>
+        <div class="usernamepwd"></div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <img src="https://cdn3.iconfinder.com/data/icons/testingelite1/32/account-512.png" style="width: 20px;"> </span>
+          </div>
+          <input name="username" id="username" class="form-control" type="text" placeholder="Username">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <img src="https://icons-for-free.com/iconfiles/png/512/lock+password+protect+safety+security+icon-1320086045132546966.png" style="width: 20px;"> </span>
+          </div>
+          <input name="password" id="password" class="form-control" type="password" placeholder="Password">
+        </div>
+
+        <!-- <div class="input">
+            <input name="username" id="username" class="form-control" type="text" placeholder="Username">
+        </div>
+        <div class="input">
+            <input name="password" id="password" class="form-control" type="password" placeholder="Password">
+        </div> -->
+        <button class="btn btn-primary btn-block" type="submit" style="margin-top: 30px;">Submit</button>
+    </div>
+</form>
+</body>
+</html>
+
+<style>
+body {
+  background: url(https://media.discordapp.net/attachments/617966300274360351/780504782737506314/766ab542-612f-4fe4-ada5-2513824fe338.jpg?width=1019&height=679);
+  background-position : top;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-size: cover;
+}
+</style>

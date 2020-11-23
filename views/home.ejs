@@ -21,17 +21,19 @@
             <img src="https://media.discordapp.net/attachments/617966300274360351/776332539623112714/logo02.png" alt=""
                 width="500px">
         </div>
+        <a href="/accInfo" class="accBox">
         <div class="userAccount">
-            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+            <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg" style="float: left;">
                 <path
                     d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
                 <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
             </svg>
-            <h4 style="float: left;">Naefkeaa Weeryy</h4>
-
+            <h4 style="float: left; margin-left: 5px;"><%= displayname_th %></h4>
+            
         </div>
+         </a>
         <div class="clearfix"></div>
         <br>
         <div class="menu">
@@ -45,16 +47,33 @@
             <form action="/addsubject">
                 <button class="btn btn-outline-warning">ยื่นคำร้องลงทะเบียนล่าช้า</button>
             </form>
-            <form action="" style="margin-bottom: 50px;">
+            <form action="/payment">
+                <button class="btn btn-outline-warning">ชำระเงิน</button>
+            </form>
+            <form action="/charges" style="margin-bottom: 50px;">
                 <button class="btn btn-outline-warning">ภาระค่าใช้จ่าย</button>
             </form>
 
-            <form action="">
-                <a href="https://www.instagram.com/mr.bean_eiei/" class="btn btn-outline-success">Contact Us</a>
+            <form action="/contactus">
+                <button class="btn btn-outline-success">Contact Us</button>
             </form>
             <form action="/">
-                <button class="btn btn-outline-danger">ออกจากระบบ</button>
+                <button class="btn btn-outline-danger" onclick="myFunction()">ออกจากระบบ</button>
             </form>
+            <p id="demo"></p>
+            <script>
+                function myFunction() {
+                  var txt;
+                  if (confirm("ต้องการออกจากระบบใช่หรือไม่")) 
+                  {
+                    txt = "OK";
+                  } else 
+                  {
+                    txt = "Cancel";
+                  }
+                  document.getElementById("demo").innerHTML = txt;
+                }
+                </script>
         </div>
         <div class="welcome">
             <H1>Welcome to Education Service...</H1>
@@ -67,7 +86,7 @@
 
 <style>
     body {
-        background: url(https://wallpapersflood.com/wp-content/uploads/hawaii_4k_hd_wallpaper_kee_beach_island_kauai_sky_sea_ocean_water_sunset_sunrise_rocks_sun_clouds_26696.jpg);
+        background: url(https://cdn.discordapp.com/attachments/464453473484931073/779756315680440340/763840.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
