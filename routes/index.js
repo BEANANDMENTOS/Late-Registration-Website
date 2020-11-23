@@ -26,6 +26,21 @@ router.post('/login', async function(req, res) {
       faculty: "คณะวิทยาศาสตร์และเทคโนโลยี",
     });
   }
+  else if(req.body.username == 'isus' && req.body.password == 'api') {
+    res.render('home', {
+      status: true,
+      message: "Success",
+      type: "student",
+      username: "6209650222",
+      tu_status: "ปกติ",
+      statusid: "10",
+      displayname_th: "ภูริน โถทอง",
+      displayname_en: "POORIN THOTONG",
+      email: "poorin.tho@dome.tu.ac.th",
+      department: "ปริญญาตรีภาคพิเศษ สาขาวิชาวิทยาการคอมพิวเตอร์",
+      faculty: "คณะวิทยาศาสตร์และเทคโนโลยี",
+    });
+  }
   else if(req.body.username == 'admin' && req.body.password == 'eiei')  {
     res.render('home', {
       status: true,
