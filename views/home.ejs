@@ -75,9 +75,60 @@
                 }
                 </script>
         </div>
-        <div class="welcome">
+        <div style="width: 750px; height: 250px; float: left; background-color: white; border-radius: 10px; margin-left: 10px;">
+        <div class="welcome" style="margin-top: 20px;">
             <H1>Welcome to Education Service...</H1>
+            <div id="countdown_dashboard">
+                <div class="dash weeks_dash">
+                   <span class="dash_title">weeks</span>
+                   <div class="digit">0</div>
+                   <div class="digit">4</div>
+                </div>
+                <div class="dash days_dash">
+                   <span class="dash_title">days</span>
+                   <div class="digit">1</div>
+                   <div class="digit">8</div>
+                </div>
+                <div class="dash hours_dash">
+                   <span class="dash_title">hours</span>
+                   <div class="digit">2</div>
+                   <div class="digit">3</div>
+                </div>
+                <div class="dash minutes_dash">
+                   <span class="dash_title">minutes</span>
+                   <div class="digit">5</div>
+                   <div class="digit">0</div>
+                </div>
+                <div class="dash seconds_dash">
+                   <span class="dash_title">seconds</span>
+                   <div class="digit">4</div>
+                   <div class="digit">0</div>
+                </div>
+             </div>
         </div>
+        <script type="text/javascript" src="{{asset('/jquery/jquery.jwtcountdown.js')}}"></script>
+<script type="text/javascript">
+$(function(){
+   $('#countdown_dashboard').countDown({
+      targetDate: {
+         'day':   1,
+         'month':  1,
+         'year':  2017,
+         'hour':  3,
+         'min':   4,
+         'sec':   50
+         // time set as UTC
+         // 'utc':      true    
+      },
+      // onComplete function
+      onComplete: function() 
+      { 
+  
+      }   
+   });
+});
+</script>
+    </div>
     </div>
 
 </body>
@@ -91,4 +142,43 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    
 </style>
+<style type="text/css">
+    #container_counter {
+       margin: 50px auto;
+       width: 700px;
+       color: #555;
+    }
+    #countdown_dashboard {
+       height: 110px;
+    }
+    .dash {
+       width: 110px;
+       height: 114px;
+       background: transparent url('lwtcountdown/images/dash.png') 0 0 no-repeat;
+       float: left;
+       margin-left: 20px;
+       position: relative;
+    }
+    .dash .digit {
+       font-size: 55pt;
+       font-weight: bold;
+       float: left;
+       width: 55px;
+       text-align: center;
+       font-family: Times;
+       color: #555;
+       position: relative;
+    }
+    .dash_title {
+       position: absolute;
+       display: block;
+       bottom: 0px;
+       right: 6px;
+       font-size: 9pt;
+       color: #555;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+    }
+ </style>
