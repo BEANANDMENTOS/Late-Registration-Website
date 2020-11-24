@@ -99,19 +99,41 @@
     - 1 คำร้องต่อ 1 รายวิชา
                 </pre>
                 <label style="margin-left: 50px;">
-                    <input name="checkBox" id="checkBox" type="checkbox"> รับทราบเงื่อนไข
+                    <input name="checkBox" id="myCheck" type="checkbox" onclick="myFunction()"> รับทราบเงื่อนไข
+                    <!-- <input type="checkbox" id="myCheck" onclick="myFunction()"> -->
                 </label>
                     </div>
                     <div class="modal-footer">
                         <div class="agreebtn text-md-center">
                             <a href="/addsubject" class="btn btn-danger">ยกเลิก</a>
-                            <a href="/information" class="btn btn-success" style="margin-left: 10px;">ตกลง</a>
+                            <!-- <a href="/information" class="btn btn-success" style="margin-left: 10px;" disabled>ตกลง</a> -->
+                            <form action="/information">
+                                <button class="btn btn-success disabled" style="margin-left: 10px;" id="dem" type="button" onclick="goAdd()">ตกลง</button>
+                            </form>
                         </div>
                     </div>
                   </div>
                 </div>
               </div>
         </form>
+        <script>
+            function myFunction() {
+                
+                var checkBox = document.getElementById("myCheck");
+                //var text = document.getElementById("text");
+                if (checkBox.checked == true)
+                    {
+                        // text.style.display = "block";
+                        document.getElementById("dem").classList.remove('disabled');
+                        // document.getElementById("dem").disabled = false;
+                    } else {
+                        document.getElementById("dem").classList.add('disabled');
+                    }
+            }  
+            function goAdd(){
+                window.location.href = '/information';
+            }
+        </script>
         <div class="subjectBox" style="margin-top: 65px;">
             <div>
                 <h4 style="width: 625px; float: left;">ชื่อวิชา : วิศวกรรมซอฟต์แวร์เบื้องต้น</h4>
