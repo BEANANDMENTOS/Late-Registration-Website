@@ -26,6 +26,21 @@ router.post('/login', async function(req, res) {
       faculty: "คณะวิทยาศาสตร์และเทคโนโลยี",
     });
   }
+  else if(req.body.username == '6209650230' && req.body.password == '1412') {
+    res.render('home', {
+      status: true,
+      message: "Success",
+      type: "student",
+      username: "6209650230",
+      tu_status: "ปกติ",
+      statusid: "10",
+      displayname_th: "นวพงศ์ สิตรุโน",
+      displayname_en: "Nawapong Sitaruno",
+      email: "nawapong.sit@dome.tu.ac.th",
+      department: "ปริญญาตรีภาคพิเศษ สาขาวิชาวิทยาการคอมพิวเตอร์",
+      faculty: "คณะวิทยาศาสตร์และเทคโนโลยี",
+    });
+  }
   else if(req.body.username == 'isus' && req.body.password == 'api') {
     res.render('home', {
       status: true,
