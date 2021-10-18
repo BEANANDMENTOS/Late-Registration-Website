@@ -5,9 +5,9 @@ var https = require("https");
 var http = require("https");
 
 
-let nameTH = "นาวี ฤทธิ์เดช";
-let nameEng = "Nave Ritdeath"
-let ID = "6209650000"
+let nameTH = "";
+let nameEng = ""
+let ID = " "
 
 // router.post('/login', async function(req, res) {
 //   console.log(req.body);
